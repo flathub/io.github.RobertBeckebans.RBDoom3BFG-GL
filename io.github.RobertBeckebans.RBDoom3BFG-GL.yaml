@@ -11,8 +11,8 @@ finish-args:
   - --share=network
 cleanup:
   - /include
-  - '*.a'
-  - '*.la'
+  - /lib/*.a
+  - /lib/*.la
   - /lib*/pkgconfig
   - /lib*/debug
   - /share/man
@@ -29,6 +29,7 @@ modules:
     no-make-install: true
     config-opts:
       - -DCMAKE_BUILD_TYPE=Release
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
       - -DSDL2=ON
       - -DFFMPEG=OFF
       - -DBINKDEC=ON
