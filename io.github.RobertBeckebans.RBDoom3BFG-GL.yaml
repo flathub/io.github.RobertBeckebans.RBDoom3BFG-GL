@@ -9,14 +9,6 @@ finish-args:
   - --socket=pulseaudio
   - --share=ipc
   - --share=network
-cleanup:
-  - /include
-  - '*.a'
-  - '*.la'
-  - /lib*/pkgconfig
-  - /lib*/debug
-  - /share/man
-  - /share/cmake
 modules:
   - shared-modules/glew/glew.json
   - shared-modules/glu/glu-9.json
